@@ -1,0 +1,71 @@
+.hero {
+    text-align: left;
+}
+
+
+.hero h1 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2em;
+    font-weight: 600;
+    max-width: 500px;
+    line-height: 1.8em;
+    margin: 2em 0;
+}
+
+.hero p::before {
+    content: "";
+    display: block;
+    width: 300px;
+    border: 2px solid #FFDB37;
+    margin: 1em auto;
+}
+
+.hero a {
+    background: #00b8a9;
+    padding: 1em 3em;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.375em;
+    font-weight: 700;
+}
+
+.hero p::before {
+    font-size: 1.3em;
+    padding: 0;
+    margin: 0 0 3em 0;
+}
+
+.figure img {
+    width: 120%;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    text-align: center;
+    width: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+main {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero p::before {
+    font-size: 1.3em;
+    padding: 0;
+    margin: 0.5em auto;
+  }
+}

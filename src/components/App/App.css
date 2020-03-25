@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: #3e7c64;
+  color: white;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 2em 0.4em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+main {
+  display: flex;
+}
+
+.form-btn--submit {
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 1.15em;
+  background: #3c9d9b;
+  border: none;
+  padding: 0.5em 2em;
+  color: white;
+  margin-right: 0.5em;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+
+.form-btn--submit:hover {
+  background: #FFDB37;
+  color: #5c5c5c;
+  cursor: pointer;
+}
+
+.form-btn--submit:focus {
+  outline: none;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 768px) {
+
+  html,
+  body {
+    min-height: 100%;
+  }
+
+  header {
+    text-align: center;
+  }
+}

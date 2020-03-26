@@ -1,5 +1,5 @@
 # politico-react
-a reactjs politico application
+a react politico application
 
 ## Available Scripts
 

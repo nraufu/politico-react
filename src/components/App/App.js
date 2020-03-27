@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "../Navbar/Navbar";
 import Landing from "../Landing/Landing";
 import SignUp from "../SignUp/SignUp";
+import SignIn from "../SignIn/SignIn";
 import Footer from "../Footer/Footer";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Landing} />
           <Route path="/signup" component={SignUp} />
+          <Route path="/signin" component={SignIn} />
         </Switch>
         <Footer />
       </div>

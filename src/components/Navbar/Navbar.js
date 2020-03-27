@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 import vote_img from "./img/vote-hand.png";
@@ -9,12 +10,12 @@ class Navbar extends Component {
     return (
       <header className="container">
         <div className="logo">
-          <a href="./#">
+          <Link to="/">
             <h1 id="p-logo">
               <img src={vote_img} alt="logo" width="25px" height="25px" />
               Politico
             </h1>
-          </a>
+          </Link>
         </div>
         <nav className="nav">
           <a href="./#" className="nav-open-menu js-open-menu">
@@ -22,7 +23,7 @@ class Navbar extends Component {
           </a>
           <ul className="list nav-list js-nav-list">
             <li className="list-item">
-              <a href="./#" class="nav-close-menu js-close-menu">
+              <a href="./#" className="nav-close-menu js-close-menu">
                 {" "}
               </a>
             </li>

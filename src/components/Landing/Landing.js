@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Landing.css";
 import voters from "./img/voters.png";
 
@@ -14,9 +15,9 @@ class Landing extends Component {
             running for different government offices while building trust in the
             process through transparency.
           </p>
-          <a className="form-btn--submit" href="./#">
+          <Link to="/signup" className="form-btn--submit">
             SignUp & Vote
-          </a>
+          </Link>
         </section>
         <div className="side-image">
           <figure>

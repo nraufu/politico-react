@@ -28,9 +28,9 @@ class Navbar extends Component {
               </a>
             </li>
             <li className="list-item">
-              <a href="./#" className="link nav-link">
+              <Link to="/signin" className="link nav-link">
                 SignIn
-              </a>
+              </Link>
             </li>
             <li className="list-item" id="p-logo">
               <a href="./#" className="link nav-link">

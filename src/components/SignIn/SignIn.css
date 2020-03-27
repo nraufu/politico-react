@@ -1,0 +1,20 @@
+.alternate {
+    font-size: 1.15em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.form-btn--alternate {
+    color: #3c9d9b;
+    font-size: 1.15em;
+    line-height: 0.5em;
+    position: relative;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form-btn--alternate:hover {
+    color: #5c5c5c;
+    cursor: pointer;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import './SignIn.css';
+import { Link } from "react-router-dom";
+import "./SignIn.css";
 
 class SignIn extends Component {
 	render() {
@@ -8,7 +9,10 @@ class SignIn extends Component {
 				<div className="main main-home">
 					<div className="form-group">
 						<h2 className="log-title">SignIn</h2>
-						<form className="form-group-form js-form-login" action="./parties.html">
+						<form
+							className="form-group-form js-form-login"
+							action="./parties.html"
+						>
 							<input
 								className="form-input"
 								type="text"
@@ -21,15 +25,17 @@ class SignIn extends Component {
 								placeholder="Password"
 								required
 							/>
-							<button type="submit" className="form-btn--submit js-login-button">
+							<button
+								type="submit"
+								className="form-btn--submit js-login-button"
+							>
 								Login
 							</button>
 							<p className="alternate">
 								Forgot Password?
-								<a className="form-btn--alternate" href="./recover.html">
-									{" "}
+								<Link className="form-btn--alternate" to="/recoverPassword">
 									Recover Password
-								</a>
+								</Link>
 							</p>
 						</form>
 					</div>

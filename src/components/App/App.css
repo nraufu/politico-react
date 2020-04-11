@@ -2,7 +2,7 @@
 
 html {
   font-family: 'Source Sans Pro', sans-serif;
-  background: #3e7c64;
+  background: #3e7c64 !important;
   color: white;
 }
 
@@ -124,6 +124,22 @@ main {
 
 .form-btn--submit:focus {
   outline: none;
+}
+
+.alert {
+  width: 70%;
+  margin: auto;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
 }
 
 /* media queries */

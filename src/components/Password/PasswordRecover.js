@@ -1,22 +1,30 @@
-import React, { Component } from "react";
+import React from "react";
+import Joi from "joi-browser";
+import Form from "./../common/form";
 
-class PasswordRecover extends Component {
+class PasswordRecover extends Form {
+	state = {
+		data: { email: "" },
+		errors: {},
+	};
+
+	schema = {
+		email: Joi.string().email().trim().required().label("Email"),
+	};
+
+	doSubmit = () => {
+		this.props.history.push("/signIn");
+	};
+
 	render() {
 		return (
-			<main class="container">
-				<div class="main main-home">
-					<div class="form-group">
-						<h2 class="log-title"> Recover Password </h2>
-						<form class="form-group-form js-form-login" action="./signin.html">
-							<input
-								class="form-input"
-								type="text"
-								placeholder="Email"
-								required
-							/>
-							<button type="submit" class="form-btn--submit js-login-button">
-								Recover
-							</button>
+			<main className="container">
+				<div className="main main-home">
+					<div className="form-group">
+						<h2 className="log-title"> Recover Password </h2>
+						<form className="form-group-form" onSubmit={this.handleSubmit}>
+							{this.renderInput("email", "Enter Email")}
+							{this.renderButton("Recover")}
 						</form>
 					</div>
 				</div>

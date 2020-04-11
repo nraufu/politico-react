@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-
 import vote_img from "./img/vote-hand.png";
-import admin_logo from "./img/admin-logo.jpg";
 
 class Navbar extends Component {
 	render() {
@@ -19,24 +17,28 @@ class Navbar extends Component {
 				</div>
 				<nav className="nav">
 					<a href="./#" className="nav-open-menu js-open-menu">
-						{" "}
+						{""}
 					</a>
 					<ul className="list nav-list js-nav-list">
 						<li className="list-item">
 							<a href="./#" className="nav-close-menu js-close-menu">
-								{" "}
+								{""}
 							</a>
 						</li>
-						<li className="list-item">
-							<Link to="/signin" className="link nav-link">
-								SignIn
-							</Link>
-						</li>
-						<li className="list-item" id="p-logo">
-							<Link to="adminLog" className="link nav-link">
-								<img src={admin_logo} alt="admin" width="25px" height="25px" />
-							</Link>
-						</li>
+						{window.location.pathname !== "/signIn" && (
+							<li className="list-item">
+								<a href="/signIn" className="link nav-link">
+									SignIn
+								</a>
+							</li>
+						)}
+						{window.location.pathname === "/signIn" && (
+							<li className="list-item">
+								<a href="/signUp" className="link nav-link">
+									SignUp
+								</a>
+							</li>
+						)}
 					</ul>
 				</nav>
 			</header>

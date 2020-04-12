@@ -1,28 +1,32 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import "./App.css";
 import Navbar from "../Navbar/Navbar";
 import Landing from "../Landing/Landing";
 import SignUp from "../SignUp/SignUp";
 import SignIn from "../SignIn/SignIn";
-import Log from "../Admin/Log";
+import Parties from "./../Parties/parties";
 import PasswordRecover from "../Password/PasswordRecover";
+import Footer from "./../Footer/Footer";
 import NotFound from "./../notFound";
+import "./App.css";
 
 function App() {
 	return (
-		<div className="App">
+		<React.Fragment>
 			<Navbar />
-			<Switch>
-				<Route path="/signUp" component={SignUp} />
-				<Route path="/signIn" component={SignIn} />
-				<Route path="/adminLog" component={Log} />
-				<Route path="/recoverPassword" component={PasswordRecover} />
-				<Route path="/not-found" component={NotFound} />
-				<Route path="/" exact component={Landing} />
-				<Redirect to="/not-found" />
-			</Switch>
-		</div>
+			<div className="container main">
+				<Switch>
+					<Route path="/signUp" component={SignUp} />
+					<Route path="/signIn" component={SignIn} />
+					<Route path="/recoverPassword" component={PasswordRecover} />
+					<Route path="/parties" component={Parties} />
+					<Route path="/not-found" component={NotFound} />
+					<Route path="/" exact component={Landing} />
+					<Redirect to="/not-found" />
+				</Switch>
+			</div>
+			<Footer />
+		</React.Fragment>
 	);
 }
 

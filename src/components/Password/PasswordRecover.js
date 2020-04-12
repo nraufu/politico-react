@@ -18,17 +18,13 @@ class PasswordRecover extends Form {
 
 	render() {
 		return (
-			<main className="container">
-				<div className="main main-home">
-					<div className="form-group">
-						<h2 className="log-title"> Recover Password </h2>
-						<form className="form-group-form" onSubmit={this.handleSubmit}>
-							{this.renderInput("email", "Enter Email")}
-							{this.renderButton("Recover")}
-						</form>
-					</div>
-				</div>
-			</main>
+			<div className="col-6 mx-auto bg-light rounded py-4">
+				<h4 className="text-center py-2">Recover</h4>
+				<form onSubmit={this.handleSubmit}>
+					{this.renderInput("email", "Enter Email")}
+					{this.renderButton("Recover")}
+				</form>
+			</div>
 		);
 	}
 }

@@ -2,7 +2,6 @@ import React from "react";
 import Joi from "joi-browser";
 import { Link } from "react-router-dom";
 import Form from "./../common/form";
-import "./SignIn.css";
 
 class SignIn extends Form {
 	state = {
@@ -16,32 +15,25 @@ class SignIn extends Form {
 	};
 
 	doSubmit = () => {
-		this.props.history.replace("/");
+		window.location.href = "/parties";
 	};
 
 	render() {
 		return (
-			<main className="container">
-				<div className="main main-home">
-					<div className="form-group">
-						<h2 className="log-title">SignIn</h2>
-						<form
-							className="form-group-form js-form-login"
-							onSubmit={this.handleSubmit}
-						>
-							{this.renderInput("nationalId", "National Id")}
-							{this.renderInput("password", "Password", "password")}
-							{this.renderButton("Login")}
-							<p className="alternate">
-								Forgot Password?
-								<Link className="form-btn--alternate" to="/recoverPassword">
-									Recover Password
-								</Link>
-							</p>
-						</form>
-					</div>
-				</div>
-			</main>
+			<div className="col-6 mx-auto bg-light rounded py-4">
+				<h4 className="text-center py-2">SignIn</h4>
+				<form onSubmit={this.handleSubmit}>
+					{this.renderInput("nationalId", "National Id")}
+					{this.renderInput("password", "Password", "password")}
+					{this.renderButton("Login")}
+					<p className="text-dark mt-4">
+						Forgot Password?{" "}
+						<Link className="text-decoration-none" to="/recoverPassword">
+							Recover Password
+						</Link>
+					</p>
+				</form>
+			</div>
 		);
 	}
 }

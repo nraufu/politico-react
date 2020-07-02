@@ -1,0 +1,47 @@
+.navBar {
+	width: 120rem;
+	margin: 0 auto;
+	padding-top: 1rem;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+}
+
+.navBar__logo {
+	text-decoration: none;
+	font-size: 1.8rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, #FFDB37, #e4bd10);
+	background-clip: text;
+	color: transparent;
+}
+
+
+.navBar__list {
+	list-style: none;
+}
+
+.navBar__item {
+	float: left;
+}
+
+.navBar__item:not(:last-child) {
+	margin-right: 1.5rem;
+}
+
+
+.navBar__link:link,
+.navBar__link:visited {
+	text-decoration: none;
+	display: inline-block;
+	color: inherit;
+	transform: scale(0.9);
+	transition: all .3s;
+}
+
+.navBar__link:hover,
+.navBar__link:active {
+	transform: scale(1.2);
+}

@@ -1,0 +1,27 @@
+.Footer {
+	position: fixed;
+	bottom: 1rem;
+	left: 41%;
+	text-align: center;
+	font-size: 1.75rem;
+	text-transform: uppercase;
+	color: #fff;
+	box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0) !important;
+	border-radius: 10px;
+	padding: .4rem;
+}
+
+.Footer i {
+	color: #f01717;
+}
+
+.Footer a {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
+}
+
+.Footer a:hover {
+	border-bottom: 1px dashed #eee;
+}

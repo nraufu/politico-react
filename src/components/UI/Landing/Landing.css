@@ -1,0 +1,34 @@
+.Landing {
+	padding: 10rem 0 20rem 0;
+}
+
+
+.Landing__header {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 2rem;
+	margin: 3rem 0;
+	animation: moveInRight 1.3s ease-in-out;
+}
+
+.Landing__paragraph {
+	font-size: 1.75rem;
+	font-weight: 700;
+	animation: moveInLeft 1.3s ease-in-out;
+}
+
+.Landing__paragraph::before {
+	content: "";
+	margin: -2rem 0 2rem 0;
+	width: 250px;
+	height: 0.5rem;
+	display: block;
+	background: linear-gradient(to right, yellow, orange);
+	animation: moveInBottom 1.3s ease-in-out;
+}
+
+
+.Landing__image {
+	cursor: pointer;
+	animation: moveInRight 1.3s ease-in-out;
+}

@@ -1,5 +1,5 @@
-import fprLogo from '../components/Parties/img/fpr-logo.jpg';
-import dgprLogo from '../components/Parties/img/dgpr-logo.jpg';
+import fprLogo from '../assets/images/fpr-logo.jpg';
+import dgprLogo from '../assets/images/dgpr-logo.jpg';
 
 const parties = [{
 	logo: dgprLogo,

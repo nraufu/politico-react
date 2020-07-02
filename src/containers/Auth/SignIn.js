@@ -1,7 +1,7 @@
 import React from "react";
 import Joi from "joi-browser";
 import { Link } from "react-router-dom";
-import Form from "./../common/form";
+import Form from "../../components/common/form";
 
 class SignIn extends Form {
 	state = {
@@ -20,15 +20,15 @@ class SignIn extends Form {
 
 	render() {
 		return (
-			<div className="col-6 mx-auto bg-light rounded py-4">
-				<h4 className="text-center py-2">SignIn</h4>
-				<form onSubmit={this.handleSubmit}>
+			<div className="Form--section">
+				<h4 className="Form__header">SignIn</h4>
+				<form className="Form" onSubmit={this.handleSubmit}>
 					{this.renderInput("nationalId", "National Id")}
 					{this.renderInput("password", "Password", "password")}
 					{this.renderButton("Login")}
-					<p className="text-dark mt-4">
+					<p className="Form__paragraph">
 						Forgot Password?{" "}
-						<Link className="text-decoration-none" to="/recoverPassword">
+						<Link className="Form__Link" to="/recoverPassword">
 							Recover Password
 						</Link>
 					</p>

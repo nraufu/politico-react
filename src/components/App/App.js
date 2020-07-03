@@ -9,6 +9,7 @@ import PasswordRecover from "../../containers/Auth/PasswordRecover";
 import Footer from "./../UI/Footer/Footer";
 import NotFound from "../UI/notFound";
 import Aux from "../../HOC/Auxiliary/Auxiliary";
+import Offices from "../../containers/Offices/Offices";
 import "./App.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 					<Route path="/signIn" component={SignIn} />
 					<Route path="/recoverPassword" component={PasswordRecover} />
 					<Route path="/parties" component={Parties} />
+					<Route path="/offices" component={Offices} />
 					<Route path="/not-found" component={NotFound} />
 					<Route path="/" exact component={Landing} />
 					<Redirect to="/not-found" />

@@ -21,6 +21,11 @@ class Navbar extends Component {
 								</Link>
 							</li>
 							<li className="navBar__item">
+								<Link className="navBar__link" to="/offices">
+									<i className="fa fa-list" aria-hidden="true"></i> Offices
+								</Link>
+							</li>
+							<li className="navBar__item">
 								<Link className="navBar__link" to="/">
 									<i className="fa fa-sign-out" aria-hidden="true"></i> SignOut
 								</Link>

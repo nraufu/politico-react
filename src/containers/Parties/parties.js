@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getParties } from "./../../services/partyService";
+import Table from "../../components/UI/Table/Table";
 import "./Parties.css";
 
 class Parties extends Component {
@@ -10,38 +11,22 @@ class Parties extends Component {
 	}
 
 	render() {
-		return (
-			<section className="Table">
-				<div className="table-container">
-					<table>
-						<thead>
-							<tr>
-								<th>Logo</th>
-								<th>Party Name</th>
-								<th>HQ Address</th>
-							</tr>
-						</thead>
-						<tbody>
-							{this.state.parties.map((party, index) => (
-								<tr key={index}>
-									<td>
-										<img
-											src={party.logo}
-											alt={party.partyName}
-											className="Table__img"
-											width="25px"
-											height="25px"
-										/>
-									</td>
-									<td>{party.partyName}</td>
-									<td>{party.hqAddress}</td>
-								</tr>
-							))}
-						</tbody>
-					</table>
-				</div>
-			</section>
-		);
+		const tbody = this.state.parties.map((party, index) => (
+			<tr key={index}>
+				<td>
+					<img
+						src={party.logo}
+						alt={party.partyName}
+						className="Table__img"
+						width="25px"
+						height="25px"
+					/>
+				</td>
+				<td>{party.partyName}</td>
+				<td>{party.hqAddress}</td>
+			</tr>
+		));
+		return <Table body={tbody} tableType="parties" />;
 	}
 }
 

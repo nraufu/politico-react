@@ -2,20 +2,23 @@ import React from "react";
 import Joi from "joi-browser";
 import { Link } from "react-router-dom";
 import Form from "../../components/common/form";
+import { login } from "../../services/authService";
 
 class SignIn extends Form {
 	state = {
-		data: { nationalId: "", password: "" },
+		data: { national_id: "", password: "" },
 		errors: {},
 	};
 
 	schema = {
-		nationalId: Joi.number().required().label("National Id"),
+		national_id: Joi.number().required().label("National Id"),
 		password: Joi.string().trim().required().label("Password"),
 	};
 
-	doSubmit = () => {
-		window.location.href = "/parties";
+	doSubmit = async () => {
+		const { token } = await login(this.state.data);
+		localStorage.setItem("Token", token);
+		window.location = "/parties";
 	};
 
 	render() {
@@ -23,7 +26,7 @@ class SignIn extends Form {
 			<div className="Form--section">
 				<h4 className="Form__header">SignIn</h4>
 				<form className="Form" onSubmit={this.handleSubmit}>
-					{this.renderInput("nationalId", "National Id")}
+					{this.renderInput("national_id", "National Id")}
 					{this.renderInput("password", "Password", "password")}
 					{this.renderButton("Login")}
 					<p className="Form__paragraph">

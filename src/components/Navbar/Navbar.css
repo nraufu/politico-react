@@ -45,6 +45,7 @@
 }
 
 .navBar__link:active,
+.navBar__link.active,
 .navBar__link:focus {
 	outline: none;
 	color: #FFDB37;

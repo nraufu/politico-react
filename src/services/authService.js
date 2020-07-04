@@ -1,13 +1,25 @@
-export const users = [{
-	names: "userOne",
-	nationalId: "1234567890",
-	email: "user@email.com",
-	password: "12345",
-}];
+import Axios from "./axios";
+import jwtDecode from "jwt-decode";
 
-export const registerUser = (newUser) => {
-	for (const user in users) {
-		if (users[user].email !== newUser.email)
-			users.push(newUser);
+export const registerUser = async (newUserData) => {
+	const response = await Axios.post("/auth/signup", newUserData);
+	return response.data.data[0];
+};
+
+export const login = async (userData) => {
+	const response = await Axios.post("/auth/login", userData);
+	return response.data.data[0];
+};
+
+export const getCurrentUser = () => {
+	try {
+		const token = localStorage.getItem("Token");
+		return jwtDecode(token);
+	} catch (err) {
+		return null;
 	}
-}
+};
+
+export const logout = () => {
+	localStorage.removeItem("Token");
+};

@@ -6,8 +6,10 @@ import { registerUser } from "./../../services/authService";
 class SignUp extends Form {
 	state = {
 		data: {
-			names: "",
-			nationalId: "",
+			fullName: "",
+			national_id: "",
+			phoneNumber: "",
+			passportUrl: "",
 			email: "",
 			password: "",
 		},
@@ -15,15 +17,18 @@ class SignUp extends Form {
 	};
 
 	schema = {
-		names: Joi.string().required().label("Full name"),
-		nationalId: Joi.number().required().label("National Id"),
+		fullName: Joi.string().required().label("Full name"),
+		national_id: Joi.number().required().label("National Id"),
+		phoneNumber: Joi.number().required().label("National Id"),
+		passportUrl: Joi.string().required().label("National Id"),
 		email: Joi.string().email().trim().required().label("Email"),
 		password: Joi.string().trim().required().label("Password"),
 	};
 
-	doSubmit = () => {
-		registerUser(this.state.data);
-		window.location.href = "/parties";
+	doSubmit = async () => {
+		const { token } = await registerUser(this.state.data);
+		localStorage.setItem("Token", token);
+		window.location = "/parties";
 	};
 
 	render() {
@@ -31,8 +36,10 @@ class SignUp extends Form {
 			<div className="Form--section">
 				<h4 className="Form__header">SignUp</h4>
 				<form className="Form" onSubmit={this.handleSubmit}>
-					{this.renderInput("names", "Full Name")}
-					{this.renderInput("nationalId", "National Id")}
+					{this.renderInput("fullName", "Full Name")}
+					{this.renderInput("national_id", "National Id")}
+					{this.renderInput("phoneNumber", "Phone Number")}
+					{this.renderInput("passportUrl", "PassportUrl")}
 					{this.renderInput("email", "Email", "email")}
 					{this.renderInput("password", "Password", "password")}
 					{this.renderButton("Create Account")}

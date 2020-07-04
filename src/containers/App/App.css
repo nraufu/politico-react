@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 *,
 *::after,
@@ -34,7 +34,7 @@ html {
 
 body {
 	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-weight: 400;
 	color: #333;
 	scrollbar-width: thin;
@@ -75,10 +75,9 @@ body {
 	}
 
 	100% {
-		transform: translate(0)
+		transform: translate(0);
 	}
 }
-
 
 @keyframes moveInLeft {
 	0% {
@@ -91,7 +90,7 @@ body {
 	}
 
 	100% {
-		transform: translate(0)
+		transform: translate(0);
 	}
 }
 
@@ -102,19 +101,20 @@ body {
 	}
 
 	100% {
-		transform: translate(0)
+		transform: translate(0);
 	}
 }
 
-
 .App {
-	background-image: linear-gradient(to left bottom, rgba(40, 180, 133, 0.9), rgba(41, 213, 111, 0.9)), url(../../assets/images/bckg-cover.jpg);
+	background-image: linear-gradient(to left bottom,
+			rgba(40, 180, 133, 0.9),
+			rgba(41, 213, 111, 0.9)),
+		url(../../assets/images/bckg-cover.jpg);
 	background-size: cover;
 	background-position: bottom;
 	position: relative;
-	min-height: 100vh;
+	min-height: 120vh;
 }
-
 
 /* button style */
 .btn,
@@ -126,7 +126,7 @@ body {
 	display: inline-block;
 	font-size: 1.6rem;
 	border-radius: 10rem;
-	transition: all .3s;
+	transition: all 0.3s;
 
 	border: none;
 	cursor: pointer;
@@ -144,6 +144,18 @@ body {
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 }
 
+.btn:disabled {
+	background-color: #e4cd4a;
+	cursor: not-allowed;
+}
+
+.btn:hover:disabled {
+	background-color: #e4cd4a;
+	transform: translateY(0);
+	box-shadow: none;
+	cursor: not-allowed;
+}
+
 .btn--yellow {
 	background-color: #f5d51f;
 	color: #f1f1f1;
@@ -152,13 +164,12 @@ body {
 	animation: moveInBottom 1.3s ease-in-out;
 }
 
-
 .btn--yellow:hover {
 	background-color: #00b8a9;
 }
 
 .btn-top-spacing {
-	margin-top: -.4rem;
+	margin-top: -0.4rem;
 }
 
 .Form--section {
@@ -168,6 +179,7 @@ body {
 	text-align: center;
 	padding: 1rem;
 	border-radius: 1rem;
+	box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
 }
 
 .Form__header {
@@ -217,7 +229,7 @@ body {
 	font-size: 1.5rem;
 	margin-left: 6.4rem;
 	display: block;
-	transition: all .3s;
+	transition: all 0.3s;
 }
 
 .Form__Input:placeholder-shown+.Form__label {
@@ -235,7 +247,7 @@ body {
 	text-decoration: none;
 	color: #000;
 	display: inline-block;
-	transition: all .3s;
+	transition: all 0.3s;
 }
 
 .Form__Link:hover {
@@ -243,7 +255,6 @@ body {
 	color: #28b485;
 	transform: scale(1.1);
 }
-
 
 .Table {
 	font-size: 1.6rem;

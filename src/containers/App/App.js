@@ -10,6 +10,7 @@ import Footer from "../../components/UI/Footer/Footer";
 import Aux from "../../HOC/Auxiliary/Auxiliary";
 import Offices from "../Offices/Offices";
 import Logout from "../Auth/Logout";
+import Politician from "../Politician/Politician";
 import { getCurrentUser } from "../../services/authService";
 import "./App.css";
 
@@ -37,6 +38,7 @@ class App extends Component {
 				<Switch>
 					<Route path="/parties" component={Parties} />
 					<Route path="/offices" component={Offices} />
+					<Route path="/politician" component={Politician} />
 					<Route path="/logout" component={Logout} />
 					<Route path="/" exact component={Parties} />
 					<Redirect to="/" />

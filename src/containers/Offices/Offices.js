@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Table from "../../components/UI/Table/Table";
 import fetchOffices from "../../services/officeService";
-import "./Offices.css";
 
 class Offices extends Component {
 	state = { offices: [] };

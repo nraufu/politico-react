@@ -309,3 +309,14 @@ tbody {
 tbody tr td {
 	padding: 2rem 5rem 2rem 3rem;
 }
+
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.Form__group select {
+	margin-bottom: 2.5rem;
+}

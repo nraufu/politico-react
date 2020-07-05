@@ -68,6 +68,27 @@ class Form extends Component {
 			/>
 		);
 	}
+
+	renderSelect(name, options, placeholder) {
+		const { data } = this.state;
+		return (
+			<div className="Form__group">
+				<select
+					name={name}
+					value={data[name]}
+					onChange={this.handleChange}
+					className="Form__Input"
+				>
+					<option value="">-- Select {placeholder} --</option>
+					{options.map((option) => (
+						<option key={option.id} value={option.value}>
+							{option.name}
+						</option>
+					))}
+				</select>
+			</div>
+		);
+	}
 }
 
 export default Form;

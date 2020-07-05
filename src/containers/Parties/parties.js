@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import fetchParties from "./../../services/partyService";
 import Table from "../../components/UI/Table/Table";
-import "./Parties.css";
 
 class Parties extends Component {
 	state = { parties: [] };

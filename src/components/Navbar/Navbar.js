@@ -25,6 +25,11 @@ const Navbar = ({ user }) => {
 							</NavLink>
 						</li>
 						<li className="navBar__item">
+							<NavLink className="navBar__link" to="/politician">
+								<i className="fa fa-user" aria-hidden="true"></i> Politician
+							</NavLink>
+						</li>
+						<li className="navBar__item">
 							<NavLink className="navBar__link" to="/logout">
 								<i className="fa fa-sign-out" aria-hidden="true"></i> SignOut
 							</NavLink>

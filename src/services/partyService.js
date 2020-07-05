@@ -1,16 +1,12 @@
-import fprLogo from '../assets/images/fpr-logo.jpg';
-import dgprLogo from '../assets/images/dgpr-logo.jpg';
+import Axios from "./axios";
 
-const parties = [{
-	logo: dgprLogo,
-	partyName: "DGPR (Democratic Green Party of Rwanda)",
-	hqAddress: "Kigali, Rwanda"
-}, {
-	logo: fprLogo,
-	partyName: "FPR (Rwanda Patriotic Front)",
-	hqAddress: "Kigali, Rwanda"
-}];
+const fetchParties = async (token) => {
+	const response = await Axios.get("/parties/", {
+		headers: {
+			"x-auth-token": token,
+		},
+	});
+	return response.data.data;
+};
 
-export const getParties = () => {
-	return parties;
-}
+export default fetchParties;

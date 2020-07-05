@@ -1,10 +1,10 @@
-const offices = [{
-	name: "Investigation Bureau",
-	type: "Federal"
-}, {
-	name: "Ministry of Agriculture",
-	type: "Local Government"
-}]
+import Axios from "./axios";
 
+const fetchOffices = async (token) => {
+	const response = await Axios.get("/offices/", {
+		headers: { "x-auth-token": token },
+	});
+	return response.data.data;
+};
 
-export default offices;
+export default fetchOffices;

@@ -7,7 +7,6 @@ import SignIn from "../Auth/SignIn";
 import Parties from "../Parties/parties";
 import PasswordRecover from "../Auth/PasswordRecover";
 import Footer from "../../components/UI/Footer/Footer";
-import NotFound from "../../components/UI/notFound";
 import Aux from "../../HOC/Auxiliary/Auxiliary";
 import Offices from "../Offices/Offices";
 import Logout from "../Auth/Logout";

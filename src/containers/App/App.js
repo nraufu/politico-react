@@ -36,8 +36,14 @@ class App extends Component {
 		if (token) {
 			routes = (
 				<Switch>
-					<Route path="/parties" component={Parties} />
-					<Route path="/offices" component={Offices} />
+					<Route
+						path="/parties"
+						render={(props) => <Parties {...props} user={this.state.user} />}
+					/>
+					<Route
+						path="/offices"
+						render={(props) => <Offices {...props} user={this.state.user} />}
+					/>
 					<Route path="/politician" component={Politician} />
 					<Route path="/logout" component={Logout} />
 					<Route path="/" exact component={Parties} />

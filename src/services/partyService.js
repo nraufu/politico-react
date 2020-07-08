@@ -1,6 +1,6 @@
 import Axios from "./axios";
 
-const fetchParties = async (token) => {
+export const fetchParties = async (token) => {
 	const response = await Axios.get("/parties/", {
 		headers: {
 			"x-auth-token": token,
@@ -9,4 +9,11 @@ const fetchParties = async (token) => {
 	return response.data.data;
 };
 
-export default fetchParties;
+export const addParty = async (data, token) => {
+	const response = await Axios.post("/parties/", data, {
+		headers: {
+			"x-auth-token": token,
+		},
+	});
+	return response.data;
+};

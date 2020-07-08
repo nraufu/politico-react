@@ -1,10 +1,17 @@
 import Axios from "./axios";
 
-const fetchOffices = async (token) => {
+export const fetchOffices = async (token) => {
 	const response = await Axios.get("/offices/", {
 		headers: { "x-auth-token": token },
 	});
 	return response.data.data;
 };
 
-export default fetchOffices;
+export const addOffice = async (data, token) => {
+	const response = await Axios.post("/offices/", data, {
+		headers: {
+			"x-auth-token": token,
+		},
+	});
+	return response.data;
+};

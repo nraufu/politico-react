@@ -1,7 +1,7 @@
 import React from "react";
 import Joi from "joi-browser";
-import fetchOffices from "../../services/officeService";
-import fetchParties from "../../services/partyService";
+import { fetchOffices } from "../../services/officeService";
+import { fetchParties } from "../../services/partyService";
 import Form from "../../components/common/form";
 import { registerCandidate } from "../../services/electionService";
 

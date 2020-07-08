@@ -168,6 +168,20 @@ body {
 	background-color: #00b8a9;
 }
 
+.btn--green {
+	background-color: #fff;
+	color: #28b485;
+	font-weight: 700;
+	margin-top: 2rem;
+	animation: moveInBottom 1.3s ease-in-out;
+}
+
+.btn--green:hover {
+	background-color: #28b485;
+	color: #fff;
+
+}
+
 .btn-top-spacing {
 	margin-top: -0.4rem;
 }
@@ -318,5 +332,5 @@ select {
 }
 
 .Form__group select {
-	margin-bottom: 2.5rem;
+	margin-bottom: 3.3rem;
 }
